@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js validation</title>
+</head>
+<body>
+    <h1>Validation Form</h1>
+    <form method="post" name="myForm" onsubmit="return validateForm()">
+    Name: <input type="text" name="name">
+    Password: <input type="text" name="password">
+    <input type="submit" value="submit">
+    </form>
+</body>
+</html>
+
+<script>
+    function validateForm(){
+        var name = document.myForm.name.value;
+        var password = document.myForm.password.value;
+
+        if(name == null || name == ""){
+            alert("Name should not be empty");
+            return false;
+        }
+        else if(password.length<6){
+            alert("Passwordmust be grater than 6 digits");
+            return false();
+        }
+    }
+</script>
